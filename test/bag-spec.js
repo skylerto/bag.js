@@ -30,24 +30,30 @@ describe("Bag.add()", function() {
   });
 });
 
-// describe("Bag.remove()", function(){
-//   var bag = new Bag();
-//   bag.add(1, "cat");
-//
-//   it("should remove from a bag", function(){
-//     bag.remove(1, "cat");
-//     expect(bag["cat"]).to.equal(0);
-//   });
-//
-//   it("should throw a 'Not a valid amout or item name' error", function() {
-//     expect(function() {
-//       bag.remove(1, 2)
-//     }).to.throw("Not a valid amout or item name");
-//   });
-//
-//   it("should throw a 'Not a valid amout or item name' error", function() {
-//     expect(function() {
-//       bag.remove("steve", 2)
-//     }).to.throw("Not a valid amout or item name");
-//   });
-// });
+describe("Bag.remove()", function(){
+  var bag = new Bag();
+  bag.add(2, "cat");
+
+  it("should remove from a bag", function(){
+    bag.remove(1, "cat");
+    expect(bag["cat"]).to.equal(1);
+  });
+
+  it("should throw a 'Not enough in the bag' error", function() {
+    expect(function() {
+      bag.remove(10, "cat")
+    }).to.throw("Not enough in the bag");
+  });
+
+  it("should throw a 'Not a valid amout or item name' error", function() {
+    expect(function() {
+      bag.remove(1, 2)
+    }).to.throw("Not a valid amout or item name");
+  });
+
+  it("should throw a 'Not a valid amout or item name' error", function() {
+    expect(function() {
+      bag.remove("steve", 2)
+    }).to.throw("Not a valid amout or item name");
+  });
+});
