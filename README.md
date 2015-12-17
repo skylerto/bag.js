@@ -7,8 +7,8 @@ Bag.js is an npm module representing a mathematical bag data structure
 To contribute clone and install dev packages.
 
 ```unix
-git clone https://www.github.com/skylerto/bagjs
-cd bagjs
+git clone https://www.github.com/skylerto/bag.js
+cd bag.js
 npm install --dev
 ```
 
