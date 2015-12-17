@@ -1,3 +1,5 @@
+# bag [![Build Status](https://travis-ci.org/skylerto/bag.js.svg?branch=master)](https://travis-ci.org/skylerto/bag.js)
+
 # Bag.js
 
 Bag.js is an npm module representing a mathematical bag data structure
