@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-var Bag = require("../lib/bag");
+var Bag = require("../index");
 
 describe("Bag", function() {
   it("should create a bag", function() {
@@ -14,18 +14,18 @@ describe("Bag.add()", function() {
 
   it("should add to a bag", function() {
     bag.add(1, "cat");
-    expect(bag["cat"]).to.equal(1);
+    expect(bag.cat).to.equal(1);
   });
 
   it("should throw a 'Not a valid amout or item name' error", function() {
     expect(function() {
-      bag.add(1, 2)
+      bag.add(1, 2);
     }).to.throw("Not a valid amout or item name");
   });
 
   it("should throw a 'Not a valid amout or item name' error", function() {
     expect(function() {
-      bag.add("steve", 2)
+      bag.add("steve", 2);
     }).to.throw("Not a valid amout or item name");
   });
 });
@@ -36,24 +36,24 @@ describe("Bag.remove()", function(){
 
   it("should remove from a bag", function(){
     bag.remove(1, "cat");
-    expect(bag["cat"]).to.equal(1);
+    expect(bag.cat).to.equal(1);
   });
 
   it("should throw a 'Not enough in the bag' error", function() {
     expect(function() {
-      bag.remove(10, "cat")
+      bag.remove(10, "cat");
     }).to.throw("Not enough in the bag");
   });
 
   it("should throw a 'Not a valid amout or item name' error", function() {
     expect(function() {
-      bag.remove(1, 2)
+      bag.remove(1, 2);
     }).to.throw("Not a valid amout or item name");
   });
 
   it("should throw a 'Not a valid amout or item name' error", function() {
     expect(function() {
-      bag.remove("steve", 2)
+      bag.remove("steve", 2);
     }).to.throw("Not a valid amout or item name");
   });
 });

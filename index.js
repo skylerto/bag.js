@@ -1,9 +1,7 @@
-// module.exports = require("./lib/bag");
-var Bag = require("./lib/bag");
-var bag = new Bag();
-console.log(bag.toString() + " " + typeof "this");
+/*
+ * Copyright (c) 2015, Skyler Layne. All rights reserved.
+ * Copyrights licensed under the MIT License.
+ * See the accompanying LICENSE file for terms.
+ */
 
-bag.add(2, "cat");
-// bag["cat"] = 2;
-bag.add(1, 2)
-console.log(bag["cat"]);
+module.exports = require("./lib/bag");
